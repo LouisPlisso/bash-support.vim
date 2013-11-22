@@ -20,11 +20,11 @@
 #===============================================================================
 #
 #          FILE:  |FILENAME|
-# 
+#
 #         USAGE:  ./|FILENAME| 
-# 
+#
 #   DESCRIPTION:  <CURSOR>
-# 
+#
 #       OPTIONS:  ---
 #  REQUIREMENTS:  ---
 #          BUGS:  ---
@@ -36,6 +36,13 @@
 #===============================================================================
 
 set -o nounset                              # Treat unset variables as an error
+
+die() {
+    err=$1
+    shift
+    printf "%s\n" "$*"
+    exit $err
+}
 
 §%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 == comment.keyword-bug == append ==
